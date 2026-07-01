@@ -38,8 +38,6 @@ Hindi.innerText="Loading...";
 
         console.log(error);
 
-        
-
     }
 
 });
