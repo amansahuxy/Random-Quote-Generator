@@ -5,7 +5,7 @@ const Hindi=document.getElementById("hindi");
 Button.addEventListener("click",async ()=>{
 
 English.innerText="Loading...";
-Hindi.innerText="Loading...";
+Hindi.innerText="Loading..";
 
     try{
         const response=await fetch("https://dummyjson.com/quotes/random");
