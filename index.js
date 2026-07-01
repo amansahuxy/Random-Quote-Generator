@@ -3,6 +3,6 @@ const Quote=document.getElementById("quote");
 
 Button.addEventListener(click,async ()=>{
     try{
-        const resposnse
+        const resposnse=await fetch()
     }
 })
