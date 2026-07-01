@@ -5,7 +5,6 @@ const copy = document.getElementById("copy");
 const like = document.getElementById("like");
 const share = document.getElementById("share");
 
-
 let englishQuote = "";
 let hindiQuote = "";
 let liked = false;
