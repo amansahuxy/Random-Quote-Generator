@@ -1,21 +1,38 @@
 const Button=document.getElementById("btn");
-const Quote=document.getElementById("quote");
+const English=document.getElementById("english");
+const Hindi=document.getElementById("hindi");
 
 Button.addEventListener("click",async ()=>{
+
+English.innerText="Loading...";
+Hindi.innerText="Loading...";
+
     try{
         const response=await fetch("https://dummyjson.com/quotes/random");
         const data=await response.json();
-        Quote.innerText=data.quote;
+        const engQuote=data.quote;
+        English.innerText=engQuote;
+        English.style.color="brown";
+
+
+        const hindiResponse=await fetch(`https://api.mymemory.translated.net/get?q=${encodeURIComponent(engQuote)}&langpair=en|hi`);
+        
+        const hindiData=await hindiResponse.json();
+        Hindi.innerText=hindiData.responseData.translatedText;
+        Hindi.style.color="green";
+
 
 
     }
 
     catch(error){
-        Quote.innerText = "Failed to load quote.";
+        English.innerText = "Failed to load quote.";
+        Hindi.innerText="";
 
         console.log(error);
 
         
 
     }
-})
+
+});
