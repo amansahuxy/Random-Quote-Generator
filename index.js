@@ -1,15 +1,19 @@
 const Button=document.getElementById("btn");
 const Quote=document.getElementById("quote");
 
-Button.addEventListener(click,async ()=>{
+Button.addEventListener("click",async ()=>{
     try{
-        const resposnse=await fetch("https://dummyjson.com/quotes/random");
+        const response=await fetch("https://dummyjson.com/quotes/random");
         const data=await response.json();
-        Quote.innerHTML=data.quote;
+        Quote.innerText=data.quote;
+
 
     }
 
     catch(error){
+        Quote.innerText = "Failed to load quote.";
+
+        console.log(error);
 
         
 
