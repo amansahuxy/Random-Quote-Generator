@@ -30,9 +30,6 @@ Hindi.innerText="Loading...";
 
         hindiQuote = hindiData.responseData.translatedText;
         Hindi.style.color="green";
-
-
-
     }
 
     catch(error){
