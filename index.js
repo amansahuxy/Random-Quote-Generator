@@ -58,7 +58,6 @@ copy.addEventListener("click", () => {
 
     alert("Quote Copied!");
 
-
 });
 
 
