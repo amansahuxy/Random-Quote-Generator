@@ -11,8 +11,6 @@ let hindiQuote = "";
 let liked = false;
 
 
-
-
 Button.addEventListener("click",async ()=>{
 
 English.innerText="Loading...";
